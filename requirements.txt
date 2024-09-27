@@ -1,0 +1,8 @@
+python-dotenv # entorno para cargar variables de entorno
+pandas # Para manipulación de datos
+numpy # Para manipulación de datos
+matplotlib # Para gráficos
+tensorboardX # Para visualizar los resultados de TensorFlow
+pyyaml # libreria para guardar configuraciones
+joblib # para guardar modelos de IA
+ipykernel # para trabajar con jupyter notebooks
