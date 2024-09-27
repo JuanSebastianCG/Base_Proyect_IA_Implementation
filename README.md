@@ -134,9 +134,10 @@ We follow **GitFlow** for version control and branch management. Here's a typica
 
 ## Start Coding
 
-1 - **Use the controllers notebooks in the `model/controllers/notbooks/` folder**:
+1.  **Use the controllers notebooks in the `model/controllers/notbooks/` folder**:
     follow the pipeline pattern and execute the functions in the order they are presented. 
-2 - **Use the scripts  `model/controllers/scripts/` folder**:
+
+2.  **Use the scripts  `model/controllers/scripts/` folder**:
     execute in the terminal the scripts available in the folder to automate the process.
 
     ```bash
@@ -145,9 +146,7 @@ We follow **GitFlow** for version control and branch management. Here's a typica
 
 ## Configuration
 
-The main configuration file is located in the `configs/` folder. You can modify the settings in `config.yaml` as needed. Copy `config.example.yaml` to `config.yaml` for the initial setup.
-
-If necessary, you can override settings using the `.env` file.
+there are two configuration file is located in the `configs/` and  `ConfirmacionMetrologica/` folder. You can modify the settings in `config.yaml` and `.env` as needed.
 
 ## Best Practices
 
