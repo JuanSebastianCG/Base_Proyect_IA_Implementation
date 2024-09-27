@@ -1,49 +1,21 @@
-Aquí tienes el README.md completo con la estructura del proyecto añadida y mejorado con el formato adecuado:
 
-```markdown
-# Confirmación Metrológica
+---
 
-Este proyecto tiene como objetivo implementar y gestionar un sistema de **confirmación metrológica**, respaldado por **machine learning** y procesamiento de datos. El proyecto sigue las mejores prácticas de desarrollo, utilizando Docker para la contenedorización y un entorno de desarrollo administrado con `venv` y Python 3.11+.
+# Confirmacion Metrologica
 
-## Tabla de Contenidos
+This project aims to implement and manage a system for **metrological confirmation**, supported by **machine learning** and data processing. The project follows best development practices, using Docker for containerization and a development environment managed with `venv` and python.
 
-- [Requisitos](#requisitos)
-- [Instalación](#instalación)
+## Table of Contents
 - [Estructura del Proyecto](#estructura-del-proyecto)
-- [Uso](#uso)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
   - [Scripts](#scripts)
-  - [Proceso GitFlow](#proceso-gitflow)
-  - [Comenzar a Programar](#comenzar-a-programar)
-- [Configuración](#configuración)
-- [Mejores Prácticas](#mejores-prácticas)
-- [Licencia](#licencia)
-
-## Requisitos
-
-Antes de comenzar, asegúrate de tener instalados los siguientes requisitos:
-
-- [Python 3.11+](https://www.python.org/downloads/)
-- [Docker](https://www.docker.com/)
-- [Git](https://git-scm.com/)
-- [VSCode](https://code.visualstudio.com/) (opcional, pero recomendado)
-
-## Instalación
-
-Sigue estos pasos para configurar el proyecto en tu máquina local.
-
-1. **Clona el repositorio**:
-   ```bash
-   git clone https://github.com/yourusername/ConfirmacionMetrologica.git
-   cd ConfirmacionMetrologica
-   ```
-
-2. **Configura el entorno virtual e instala las dependencias**:
-   ```bash
-   .\scripts.bat startProject
-   ```
-
-3. **Configura el archivo `.env`**:
-   El archivo `.env` se creará automáticamente mediante el script `scripts.bat`. Puedes modificarlo si lo necesitas.
+  - [GitFlow Process](#gitflow-process)
+  - [Start Coding](#start-coding)
+- [Configuration](#configuration)
+- [Best Practices](#best-practices)
+- [License](#license)
 
 ## Estructura del Proyecto
 
@@ -87,80 +59,105 @@ ConfirmacionMetrologica/
 ┗ scripts.bat                   # Script por lotes para automatizar tareas, como instalación de dependencias y ejecución del proyecto.
 ```
 
-## Uso
+## Requirements
+
+Before starting, make sure you have the following installed:
+
+- [Python 3.11+](https://www.python.org/downloads/)
+- [Docker](https://www.docker.com/)
+- [Git](https://git-scm.com/)
+- [VSCode](https://code.visualstudio.com/) (optional, but recommended)
+
+## Installation
+
+Follow these steps to set up the project on your local machine.
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/ConfirmacionMetrologica.git
+   cd ConfirmacionMetrologica
+   ```
+
+2. **Set up the virtual environment and install dependencies**:
+   ```bash
+   .\scripts.bat startPoryect
+   ```
+
+3. **Set up the `.env` file**:
+   automatically created by the scripts.bat file you can modify it if you need to.
+
+## Usage
 
 ### Scripts
 
-Puedes usar el archivo `scripts.bat` para automatizar tareas comunes:
+Use the `scripts.bat` file to automate tasks:
 
-- **Mostrar ayuda con los comandos disponibles**:
+- **help to show the available commands**:
   ```bash
   .\scripts.bat help
   ```
 
-### Proceso GitFlow
+### GitFlow Process
 
-Seguimos el flujo de trabajo **GitFlow** para el control de versiones y la gestión de ramas. Aquí tienes un flujo típico para agregar una nueva característica:
+We follow **GitFlow** for version control and branch management. Here's a typical workflow for adding a new feature:
 
-1. **Iniciar una nueva característica**:
-   ```bash
-   git flow feature start mi-nueva-caracteristica
-   git add .
-   git commit -m "Añadido mejora específica en funcionalidad X"
-   git flow feature finish mi-nueva-caracteristica
-   git push origin develop
-   ```
+1. **Start a new feature**:
+    ```bash
+     
+    git flow feature start mi-nueva-caracteristica # Crear y cambiar a la rama de característica
+    git add .    # Después de realizar cambios
+    git commit -m "Añadido mejora específica en funcionalidad X"
+    
+    git flow feature finish mi-nueva-caracteristica # Finalizar y fusionar en develop
+    git push origin develop # Empuja los cambios a origin
+    ```
 
-2. **Iniciar un nuevo lanzamiento**:
-   ```bash
-   git flow release start 0.1.0
-   git flow release finish 0.1.0
-   git push origin develop master --tags
-   ```
+2. **Start a new release**:
+    ```bash
+    git flow release start 0.1.0 # Crear y cambiar a la rama de lanzamiento
+    git flow release finish 0.1.0 # Finalizar y fusionar en develop y master
+    git push origin develop master --tags # Empuja los cambios a origin
+    ```
 
-3. **Iniciar un hotfix**:
-   ```bash
-   git flow hotfix start hotfix-0.1.1
-   git flow hotfix finish hotfix-0.1.1
-   git push origin develop master --tags
-   ```
+3. **Start a hotfix**:
+    ```bash
+    git flow hotfix start hotfix-0.1.1 # Crear y cambiar a la rama de hotfix
+    git flow hotfix finish hotfix-0.1.1 # Finalizar y fusionar en develop y master
+    git push origin develop master --tags # Empuja los cambios a origin
+    ```
 
-4. **Solicitar un pull request**:
-   ```bash
-   # GitFlow automáticamente crea un pull request al finalizar una feature, release o hotfix
-   git request-pull master develop
-   ```
+4. **request a pull request**:
+    ```bash
+    # but have in mind that git flow automatically creates a pull request when you finish a feature, release or hotfix
+    git request-pull master develop
+    ```
 
-### Comenzar a Programar
+## Start Coding
 
-1. **Usar los notebooks en la carpeta `model/controllers/notebooks/`**:
-   Sigue el pipeline definido en el notebook `dataPreprocessing.ipynb` y ejecuta las funciones en el orden presentado.
+1 - **Use the controllers notebooks in the `model/controllers/notbooks/` folder**:
+    follow the pipeline pattern and execute the functions in the order they are presented. 
+2 - **Use the scripts  `model/controllers/scripts/` folder**:
+    execute in the terminal the scripts available in the folder to automate the process.
 
-2. **Usar los scripts de la carpeta `model/controllers/scripts/`**:
-   Ejecuta en la terminal los scripts disponibles en esta carpeta para automatizar los procesos.
+    ```bash
+    python script.py
+    ```
 
-   ```bash
-   python script.py
-   ```
+## Configuration
 
-## Configuración
+The main configuration file is located in the `configs/` folder. You can modify the settings in `config.yaml` as needed. Copy `config.example.yaml` to `config.yaml` for the initial setup.
 
-El archivo de configuración principal se encuentra en la carpeta `configs/`. Puedes modificar la configuración en `config.yaml` según sea necesario. Copia `config.example.yaml` a `config.yaml` para la configuración inicial.
+If necessary, you can override settings using the `.env` file.
 
-Si es necesario, también puedes sobrescribir configuraciones usando el archivo `.env`.
+## Best Practices
 
-## Mejores Prácticas
+- **Version Control**: Follow GitFlow to manage branches and releases effectively.
+- **Documentation**: Keep your code well-documented, using meaningful comments and clear variable names.
+- **Unit Testing**: Always run unit tests before making any significant commits.
+- **Code Style**: Adhere to PEP 8 standards for Python code. you can see it here! [PEP 8](https://pep8.org/)
+- **Dependency Management**: Update `requirements.txt` whenever you add or remove dependencies.
+- **Docker**: Use Docker to ensure consistent environments across different machines and team members.
 
-- **Control de Versiones**: Sigue GitFlow para gestionar ramas y lanzamientos de manera eficiente.
-- **Documentación**: Mantén tu código bien documentado, usando comentarios significativos y nombres de variables claros.
-- **Pruebas Unitarias**: Ejecuta siempre pruebas unitarias antes de hacer commits importantes.
-- **Estilo de Código**: Sigue los estándares de PEP 8 para Python. Puedes revisarlos aquí: [PEP 8](https://pep8.org/).
-- **Gestión de Dependencias**: Actualiza `requirements.txt` cada vez que agregues o elimines dependencias.
-- **Docker**: Usa Docker para garantizar entornos consistentes entre diferentes máquinas y miembros del equipo.
+## License
 
-## Licencia
-
-```
-
-
-
+---
